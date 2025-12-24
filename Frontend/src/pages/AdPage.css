@@ -1,0 +1,99 @@
+.ad-page-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 50px auto;
+  gap: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.ad-image {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+.ad-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+.ad-details {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ad-details h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.ad-description {
+  font-size: 16px;
+  color: #555;
+}
+
+.ad-price {
+  font-size: 20px;
+  font-weight: 600;
+  color: #00aaff;
+}
+
+.ad-seller {
+  font-size: 14px;
+  color: #777;
+}
+
+.ad-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.ad-actions button {
+  padding: 10px 20px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-message {
+  background-color: #00aaff;
+  color: #fff;
+}
+
+.btn-message:hover {
+  background-color: #0088cc;
+}
+
+.btn-favorite {
+  background-color: #ff4d4f;
+  color: #fff;
+}
+
+.btn-favorite:hover {
+  background-color: #d9363e;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .ad-page-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ad-image, .ad-details {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}

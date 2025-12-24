@@ -1,0 +1,101 @@
+.header {
+  background-color: #ffffff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-bottom: 7px solid #0062B3;
+}
+
+/* Основной nav контейнер */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Левая и правая части */
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Левая часть выравниваем слева относительно логотипа */
+.nav-left {
+  margin-right: 20px; /* отступ от логотипа */
+}
+
+/* Правая часть выравниваем справа относительно логотипа */
+.nav-right {
+  margin-left: 20px; /* отступ от логотипа */
+}
+
+/* Логотип по центру */
+.logo {
+  cursor: pointer;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+/* Кнопки */
+.nav button {
+  background-color: #00aaff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav button:hover {
+  background-color: #0088cc;
+  transform: scale(1.05);
+}
+
+.nav button:active {
+  background-color: #0077aa;
+  transform: scale(0.95);
+}
+
+/* Логин пользователя */
+.user-login {
+  cursor: pointer;
+  color: #00aaff;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.user-login:hover {
+  background-color: rgba(0,170,255,0.1);
+}
+
+/* Адаптивность: на узких экранах можно менять порядок или уменьшать кнопки */
+@media (max-width: 768px) {
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-left,
+  .nav-right {
+    margin: 5px 0;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .nav button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+}
